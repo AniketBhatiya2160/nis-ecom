@@ -15,6 +15,7 @@ import AccessoriesScreen from "./pages/AccessoriesScreen";
 import "./index.css";
 import Cartscreen from "./pages/Cartscreen";
 import { Container } from "react-bootstrap";
+import Buy from "./utils/Buy";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/laptop" element={<LaptopScreen />} />
                 <Route path="/accessories" element={<AccessoriesScreen />} />
                 <Route path="/mycart" element={<Cartscreen />} />
+                <Route path="/buy" element={<Buy />} />
               </Routes>
             </Container>
           </div>

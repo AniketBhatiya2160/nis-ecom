@@ -10,11 +10,10 @@ import axios from "axios";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/esm/Button";
 import { removetoCart } from "../utils/removetoCart";
+import { useNavigate } from "react-router-dom";
 
 function Cartscreen() {
-  //const { cartItems } = props;
-  // const params = useParams();
-  // const { cart_id } = params;
+  const navigate = useNavigate();
 
   const [cartItems, setCartItems] = useState([]);
   const [Items, setItems] = useState(true);
@@ -34,7 +33,9 @@ function Cartscreen() {
     removetoCart(cart_id);
     setItems(!Items);
   };
-
+  const gotobuy = () => {
+    navigate("/buy");
+  };
   return (
     <div>
       <Header />
@@ -70,7 +71,9 @@ function Cartscreen() {
                         </Button>
                       </Col>
                       <Col md={2}>
-                        <Button variant="dark">Buy Now</Button>
+                        <Button variant="dark" onClick={() => gotobuy()}>
+                          Buy Now
+                        </Button>
                       </Col>
                     </Row>
                   </ListGroup.Item>
