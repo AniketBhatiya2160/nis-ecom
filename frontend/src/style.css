@@ -1,0 +1,45 @@
+.App{
+    height: 100vh;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.vimage{
+    width:150px;
+    object-fit: cover;
+}
+.btnP{
+    margin: 3px;
+    text-decoration: none;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    
+}
+.auth{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.auth span{
+   font-size: 14px;
+}
+.auth form{
+    box-sizing: border-box;
+    border: 1px solid grey;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px lightgrey;
+}
